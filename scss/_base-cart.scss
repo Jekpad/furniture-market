@@ -1,0 +1,175 @@
+.top-background {
+  height: 400px;
+  background-image: url("../img/cart/Rectangle1.jpg");
+}
+
+.header-title {
+  margin-top: 128px;
+}
+
+.button {
+  padding: 10px 34px;
+  transition: all 0.4s ease-in 0s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.cart {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+
+  &__content {
+    grid-column: span 8;
+  }
+
+  &__name-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 14px;
+
+    p {
+      color: #000;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  &__item {
+    border-top: 1px #cacdd8 solid;
+    padding-top: 25px;
+    padding-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__left {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__img {
+    width: 173px;
+    height: 173px;
+  }
+
+  &__info {
+    width: 276px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &__name {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &__description {
+    color: #888;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__price {
+    color: #050505;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &__link_box {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  &__link {
+    color: #000;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 210%;
+    text-decoration-line: underline;
+    transition: all 0.4s ease-in 0s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__count {
+    width: 70px;
+    padding: 12px;
+    border-radius: 6px;
+    background: #f7f6f6;
+    border: none;
+    outline: none;
+    color: #000;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 210%; /* 29.4px */
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__form {
+    border-radius: 20px;
+    background: #f7f6f6;
+    height: 556px;
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    padding: 42px 28px;
+
+    &__tite {
+      color: #000;
+      text-align: center;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    &__input {
+      all: unset;
+      margin-top: 44px;
+      color: #000;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      border-bottom: 1px #cacdd8 solid;
+      padding: 3px;
+    }
+
+    &__total-price {
+      color: #000;
+      text-align: center;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      padding-top: 64px;
+      padding-bottom: 18px;
+    }
+  }
+}

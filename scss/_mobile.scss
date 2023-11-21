@@ -1,0 +1,167 @@
+@media (width <= 768px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .button {
+    padding: 10px;
+  }
+
+  .top-background {
+    margin-bottom: 32px;
+    min-height: 500px;
+    height: 100vh;
+  }
+
+  .header {
+    padding-top: 32px;
+
+    &-search {
+      display: none;
+    }
+
+    &-title {
+      font-size: 48px;
+      line-height: 59px;
+      text-align: center;
+    }
+
+    &-text {
+      text-align: center;
+    }
+
+    &-link {
+      display: block;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+
+  .navigation {
+    display: none;
+
+    &-mobile {
+      display: flex;
+      align-self: center;
+      gap: 32px;
+    }
+  }
+
+  .logo {
+    &__img {
+      width: 99px;
+    }
+  }
+
+  .content {
+    margin-bottom: 0;
+
+    &__title {
+      font-size: 24px;
+      margin: 0;
+      padding: 32px 0;
+    }
+  }
+
+  .for {
+    grid-template-columns: repeat(4, 1fr);
+
+    &__item {
+      grid-column: 1 / -1;
+      height: 375px;
+      font-size: 28px;
+      line-height: 34px;
+      gap: 16px;
+
+      &_big {
+        height: 244px;
+      }
+    }
+  }
+
+  .product-card {
+    width: 100%;
+
+    &__img {
+      height: 225px;
+    }
+
+    &__name {
+      font-size: 18px;
+    }
+
+    &__description {
+      font-size: 14px;
+    }
+
+    &__price {
+      font-size: 18px;
+    }
+  }
+
+  .product-link {
+    margin: 32px 0;
+  }
+
+  .footer {
+    &__content {
+      gap: 68px;
+    }
+  }
+
+  /* =======
+    Каталог
+  ========== */
+  .addition-navigation {
+    gap: 16px;
+  }
+
+  /* =========
+      Корзина 
+    ========== */
+  .cart {
+    grid-template-columns: repeat(4, 1fr);
+
+    &__item {
+      grid-column: span 4;
+      display: flex;
+      gap: 5px;
+    }
+
+    &__info {
+      width: 100%;
+    }
+
+    &__img {
+      display: none;
+    }
+
+    &__form {
+      grid-column: span 8;
+    }
+  }
+}
+
+@media (width <= 360px) {
+  .header-title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .navigation-mobile {
+    gap: 20px;
+  }
+}
+
+@media (width <= 300px) {
+  .cart {
+    &__item {
+      flex-wrap: wrap;
+    }
+
+    &__count {
+      width: 100%;
+    }
+  }
+}

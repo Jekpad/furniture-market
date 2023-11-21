@@ -1,0 +1,17 @@
+@keyframes border-shadow {
+  100% {
+    box-shadow: 0 0 10px 5px #ccc;
+  }
+}
+
+@keyframes zoom-image {
+  0% {
+    background-position: center bottom;
+    background-size: 100%;
+  }
+
+  100% {
+    background-position: center bottom;
+    background-size: 130%;
+  }
+}

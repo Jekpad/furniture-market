@@ -1,0 +1,60 @@
+@media (width <= 1200px) {
+  .button {
+    &_high-contast {
+      color: #fff;
+      background-color: #000;
+
+      &:hover,
+      &:focus {
+        color: #000;
+        background-color: #fff;
+      }
+    }
+  }
+
+  .cart {
+    grid-template-columns: repeat(8, 1fr);
+
+    &__content {
+      grid-column: span 8;
+    }
+
+    &__form {
+      grid-column: span 4;
+    }
+  }
+
+  .center {
+    padding-left: calc(50% - 768px / 2);
+    padding-right: calc(50% - 768px / 2);
+  }
+
+  .for {
+    &__item {
+      height: 265px;
+    }
+  }
+
+  .content {
+    &__container {
+      gap: 30px;
+    }
+  }
+
+  .product-card {
+    width: 344px;
+  }
+
+  .footer {
+    &__logo {
+      display: none;
+    }
+  }
+}
+
+@media (width <= 834px) {
+  .center {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
