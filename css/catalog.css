@@ -19,11 +19,13 @@
   src: url("../fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
   font-weight: 600;
 }
+/* Окантовка тени */
 @keyframes border-shadow {
   100% {
     box-shadow: 0 0 10px 5px #ccc;
   }
 }
+/* Зум изображения */
 @keyframes zoom-image {
   0% {
     background-position: center bottom;
@@ -32,6 +34,18 @@
   100% {
     background-position: center bottom;
     background-size: 130%;
+  }
+}
+/* Пульсация */
+@keyframes pulsate-bck {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 * {
@@ -84,7 +98,8 @@ a {
 }
 
 .header {
-  height: 77px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,8 +107,8 @@ a {
 }
 
 .logo {
-  display: block;
   width: 198px;
+  height: 44px;
 }
 
 .header-search {
@@ -206,7 +221,7 @@ a {
   line-height: 32px;
 }
 
-.breadcrumb li + li:before {
+.breadcrumb li + li::before {
   padding: 8px;
   color: black;
   content: "/ ";
@@ -234,8 +249,7 @@ a {
 .content__container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 56px 32px;
+  gap: 30px 32px;
 }
 .content__title {
   font-size: 48px;
@@ -294,8 +308,8 @@ select,
   min-width: 15ch;
   max-width: 30ch;
   border: 1px solid var(--select-border);
-  border-radius: 1em;
-  padding: 0.5em 0.7em;
+  border-radius: 20px;
+  padding: 10px 14px;
   font-size: 16px;
   cursor: pointer;
   line-height: 1.1;
@@ -394,7 +408,7 @@ select,
   filter: invert(1) sepia(1) saturate(0) hue-rotate(340deg);
 }
 .product-card__icon_1 {
-  right: 40px;
+  right: 45px;
 }
 .product-card__icon_2 {
   right: 10px;
@@ -450,7 +464,7 @@ select,
   line-height: 24px; /* 150% */
   text-decoration-line: underline;
   display: block;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .product-link:hover,
@@ -467,7 +481,7 @@ select,
   justify-content: space-between;
   align-items: flex-start;
   padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 40px;
 }
 .footer__logo {
   filter: invert(1);
@@ -528,16 +542,14 @@ select,
 .footer__form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
-
 .footer__form__title {
   font-size: 14px;
-  margin-bottom: 16px;
+  margin-bottom: 4px;
   line-height: 16px;
   color: #000000;
 }
-
 .footer__form__email {
   padding: 12px 25px;
   background: #ffffff;
@@ -552,7 +564,6 @@ select,
   color: #000;
   width: 100%;
 }
-
 .footer__form__email::-moz-placeholder {
   color: #c4c4c4;
   font-size: 15px;
@@ -560,7 +571,6 @@ select,
   font-weight: 400;
   line-height: normal;
 }
-
 .footer__form__email::placeholder {
   color: #c4c4c4;
   font-size: 15px;
@@ -568,7 +578,6 @@ select,
   font-weight: 400;
   line-height: normal;
 }
-
 .footer__form__submit {
   background: rgba(222, 215, 215, 0.41);
   border: 1px solid #ffffff;
@@ -580,9 +589,7 @@ select,
   color: #000000;
   cursor: pointer;
 }
-
-.footer__form__submit:hover,
-.footer__form__submit:focus {
+.footer__form__submit:hover, .footer__form__submit:focus {
   background: #000;
   color: #fff;
 }
@@ -615,17 +622,17 @@ select,
     grid-column: span 4;
   }
   .center {
-    padding-left: calc(50% - 384px);
-    padding-right: calc(50% - 384px);
+    padding-left: calc(50% - 393px);
+    padding-right: calc(50% - 393px);
+  }
+  .for {
+    gap: 30px;
   }
   .for__item {
-    height: 265px;
+    height: 268px;
   }
   .content__container {
     gap: 30px;
-  }
-  .product-card {
-    width: 344px;
   }
   .footer__logo {
     display: none;
@@ -638,6 +645,10 @@ select,
   }
 }
 @media (width <= 768px) {
+  .logo {
+    width: 99px;
+    height: 22px;
+  }
   .center {
     padding-left: 16px;
     padding-right: 16px;
@@ -646,12 +657,17 @@ select,
     padding: 10px;
   }
   .top-background {
-    margin-bottom: 32px;
+    margin-bottom: 92px;
     min-height: 500px;
-    height: 100vh;
+    background-position: 65% 50%;
+  }
+  .header-slogan {
+    margin-top: 48px;
   }
   .header {
-    padding-top: 32px;
+    padding: 0;
+    padding-top: 50px;
+    border-bottom: none;
   }
   .header-search {
     display: none;
@@ -677,11 +693,11 @@ select,
     align-self: center;
     gap: 32px;
   }
-  .logo__img {
-    width: 99px;
-  }
   .content {
     margin-bottom: 0;
+  }
+  .content__container {
+    gap: 32px;
   }
   .content__title {
     font-size: 24px;
@@ -733,6 +749,11 @@ select,
     ========== */
   .cart {
     grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+    margin-bottom: 16px;
+  }
+  .cart__name-box {
+    display: none;
   }
   .cart__item {
     grid-column: span 4;

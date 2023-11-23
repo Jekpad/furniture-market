@@ -1,9 +1,11 @@
+/* Окантовка тени */
 @keyframes border-shadow {
   100% {
     box-shadow: 0 0 10px 5px #ccc;
   }
 }
 
+/* Зум изображения */
 @keyframes zoom-image {
   0% {
     background-position: center bottom;
@@ -13,5 +15,40 @@
   100% {
     background-position: center bottom;
     background-size: 130%;
+  }
+}
+
+/* Пульсация */
+@-webkit-keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }

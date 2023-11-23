@@ -1,4 +1,9 @@
 @media (width <= 768px) {
+  .logo {
+    width: 99px;
+    height: 22px;
+  }
+
   .center {
     padding-left: 16px;
     padding-right: 16px;
@@ -9,13 +14,19 @@
   }
 
   .top-background {
-    margin-bottom: 32px;
+    margin-bottom: 92px;
     min-height: 500px;
-    height: 100vh;
+    background-position: 65% 50%;
+  }
+
+  .header-slogan {
+    margin-top: 48px;
   }
 
   .header {
-    padding-top: 32px;
+    padding: 0;
+    padding-top: 50px;
+    border-bottom: none;
 
     &-search {
       display: none;
@@ -48,14 +59,12 @@
     }
   }
 
-  .logo {
-    &__img {
-      width: 99px;
-    }
-  }
-
   .content {
     margin-bottom: 0;
+
+    &__container {
+      gap: 32px;
+    }
 
     &__title {
       font-size: 24px;
@@ -122,6 +131,12 @@
     ========== */
   .cart {
     grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+    margin-bottom: 16px;
+
+    &__name-box {
+      display: none;
+    }
 
     &__item {
       grid-column: span 4;

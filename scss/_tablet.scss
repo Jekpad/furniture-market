@@ -25,13 +25,15 @@
   }
 
   .center {
-    padding-left: calc(50% - 768px / 2);
-    padding-right: calc(50% - 768px / 2);
+    padding-left: calc(50% - 786px / 2);
+    padding-right: calc(50% - 786px / 2);
   }
 
   .for {
+    gap: 30px;
+
     &__item {
-      height: 265px;
+      height: 268px;
     }
   }
 
@@ -42,7 +44,7 @@
   }
 
   .product-card {
-    width: 344px;
+    // width: 344px;
   }
 
   .footer {

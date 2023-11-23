@@ -11,8 +11,9 @@
   padding: 10px 34px;
   transition: all 0.4s ease-in 0s;
 
-  &:hover {
-    transform: scale(1.05);
+  &_pulsare {
+    -webkit-animation: pulsate-bck 2s linear infinite both;
+    animation: pulsate-bck 2s linear infinite both;
   }
 }
 

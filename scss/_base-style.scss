@@ -54,16 +54,24 @@ a {
 }
 
 .header {
-  height: 77px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px rgba(255, 255, 255, 0.8) solid;
+  border-bottom: 1px rgba(255 255 255 / 80%) solid;
 }
 
 .logo {
-  display: block;
+  // display: block;
+  // width: 198px;
+  // height: 44px;
+
   width: 198px;
+  height: 44px;
+
+  // &__img {
+  // }
 }
 
 .header-search {
@@ -173,7 +181,7 @@ a {
   line-height: 32px;
 }
 
-.breadcrumb li + li:before {
+.breadcrumb li + li::before {
   padding: 8px;
   color: black;
   content: "/\00a0";
@@ -201,8 +209,7 @@ a {
   &__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 56px 32px;
+    gap: 30px 32px;
   }
 
   &__title {
@@ -261,8 +268,8 @@ select,
   min-width: 15ch;
   max-width: 30ch;
   border: 1px solid var(--select-border);
-  border-radius: 1em;
-  padding: 0.5em 0.7em;
+  border-radius: 20px;
+  padding: 10px 14px;
   font-size: 16px;
   cursor: pointer;
   line-height: 1.1;
@@ -370,7 +377,7 @@ select,
     }
 
     &_1 {
-      right: 40px;
+      right: 45px;
     }
 
     &_2 {
@@ -435,7 +442,7 @@ select,
   line-height: 24px; /* 150% */
   text-decoration-line: underline;
   display: block;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .product-link:hover,
@@ -452,7 +459,7 @@ select,
   justify-content: space-between;
   align-items: flex-start;
   padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 40px;
 
   &__logo {
     filter: invert(1);
@@ -518,53 +525,53 @@ select,
 .footer__form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-}
+  gap: 12px;
 
-.footer__form__title {
-  font-size: 14px;
-  margin-bottom: 16px;
-  line-height: 16px;
-  color: #000000;
-}
+  &__title {
+    font-size: 14px;
+    margin-bottom: 4px;
+    line-height: 16px;
+    color: #000000;
+  }
 
-.footer__form__email {
-  padding: 12px 25px;
-  background: #ffffff;
-  border: 1px solid #c4c4c4;
-  outline: none;
-  box-sizing: border-box;
-  border-radius: 20px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 18px;
-  color: #000;
-  width: 100%;
-}
+  &__email {
+    padding: 12px 25px;
+    background: #ffffff;
+    border: 1px solid #c4c4c4;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000;
+    width: 100%;
+  }
 
-.footer__form__email::placeholder {
-  color: #c4c4c4;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
+  &__email::placeholder {
+    color: #c4c4c4;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 
-.footer__form__submit {
-  background: rgba(222, 215, 215, 0.41);
-  border: 1px solid #ffffff;
-  box-sizing: border-box;
-  border-radius: 20px;
-  height: 46px;
-  font-size: 15px;
-  line-height: 18px;
-  color: #000000;
-  cursor: pointer;
-}
+  &__submit {
+    background: rgba(222, 215, 215, 0.41);
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    border-radius: 20px;
+    height: 46px;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    cursor: pointer;
+  }
 
-.footer__form__submit:hover,
-.footer__form__submit:focus {
-  background: #000;
-  color: #fff;
+  &__submit:hover,
+  &__submit:focus {
+    background: #000;
+    color: #fff;
+  }
 }
